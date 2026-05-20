@@ -91,9 +91,9 @@
   .btf-label{font-size:9px;color:var(--text3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
   .btf-pct{font-size:24px;font-weight:500;letter-spacing:-.02em;margin-bottom:6px}
   .btf-pct.bull{color:var(--green)}.btf-pct.bear{color:var(--red)}.btf-pct.neu{color:var(--text2)}
-  .btf-bar-wrap{height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin-bottom:6px;display:flex}
-  .btf-bar-bull{height:100%;background:var(--green);transition:width .5s}
-  .btf-bar-bear{height:100%;background:var(--red);transition:width .5s}
+  .btf-bar-wrap{height:5px;background:var(--bg4);border-radius:3px;overflow:hidden;margin-bottom:6px;position:relative}
+  .btf-bar-bull{position:absolute;left:0;top:0;height:100%;background:var(--green);transition:width .5s}
+  .btf-bar-bear{position:absolute;right:0;top:0;height:100%;background:var(--red);transition:width .5s}
   .btf-counts{display:flex;justify-content:space-between;font-size:9px;margin-bottom:8px}
   .btf-count-bull{color:var(--green)}.btf-count-bear{color:var(--red)}
   .btf-bz{font-size:9px;padding-top:7px;border-top:0.5px solid var(--border);color:var(--text3);display:flex;justify-content:space-between;align-items:center}
@@ -267,33 +267,33 @@
 <!-- BREADTH PANEL -->
 <div class="breadth-panel">
   <div class="breadth-top">
-    <div class="breadth-title">% Weighted Bullish · 15 instruments (ex-BTC, ex-BZ) · total weight 25 · TP=(H+L+C)/3</div>
+    <div class="breadth-title">% WEIGHTED BULLISH · 15 INSTRUMENTS (EX-BTC) · TOTAL WEIGHT 25 · TP=(H+L+C)/3</div>
     <div id="breadth-signal" class="breadth-signal neu"><i class="ti ti-loader" style="font-size:13px"></i> Calculating...</div>
   </div>
   <div class="breadth-tfs">
     <div class="btf-block neu" id="btf-1m">
-      <div class="btf-label">1 min · vs 5 bars ago</div>
+      <div class="btf-label">1 MIN · EMA 3/8</div>
       <div class="btf-pct neu" id="btf-pct-1m">—%</div>
       <div class="btf-bar-wrap"><div class="btf-bar-bull" id="btf-bull-1m" style="width:50%"></div><div class="btf-bar-bear" id="btf-bear-1m" style="width:50%"></div></div>
       <div class="btf-counts"><span class="btf-count-bull" id="btf-nb-1m">—▲</span><span class="btf-count-bear" id="btf-nd-1m">—▼</span></div>
       <div class="btf-bz">BZ ROC <span class="btf-bz-val neu" id="btf-bz-1m">—</span></div>
     </div>
     <div class="btf-block neu" id="btf-5m">
-      <div class="btf-label">5 min · vs 25 bars ago</div>
+      <div class="btf-label">5 MIN · EMA 5/15</div>
       <div class="btf-pct neu" id="btf-pct-5m">—%</div>
       <div class="btf-bar-wrap"><div class="btf-bar-bull" id="btf-bull-5m" style="width:50%"></div><div class="btf-bar-bear" id="btf-bear-5m" style="width:50%"></div></div>
       <div class="btf-counts"><span class="btf-count-bull" id="btf-nb-5m">—▲</span><span class="btf-count-bear" id="btf-nd-5m">—▼</span></div>
       <div class="btf-bz">BZ ROC <span class="btf-bz-val neu" id="btf-bz-5m">—</span></div>
     </div>
     <div class="btf-block neu" id="btf-15m">
-      <div class="btf-label">15 min · vs 45 bars ago</div>
+      <div class="btf-label">15 MIN · EMA 10/30</div>
       <div class="btf-pct neu" id="btf-pct-15m">—%</div>
       <div class="btf-bar-wrap"><div class="btf-bar-bull" id="btf-bull-15m" style="width:50%"></div><div class="btf-bar-bear" id="btf-bear-15m" style="width:50%"></div></div>
       <div class="btf-counts"><span class="btf-count-bull" id="btf-nb-15m">—▲</span><span class="btf-count-bear" id="btf-nd-15m">—▼</span></div>
       <div class="btf-bz">BZ ROC <span class="btf-bz-val neu" id="btf-bz-15m">—</span></div>
     </div>
     <div class="btf-block neu" id="btf-1h">
-      <div class="btf-label">1 hour · vs 60 bars ago</div>
+      <div class="btf-label">1 HOUR · EMA 20/60</div>
       <div class="btf-pct neu" id="btf-pct-1h">—%</div>
       <div class="btf-bar-wrap"><div class="btf-bar-bull" id="btf-bull-1h" style="width:50%"></div><div class="btf-bar-bear" id="btf-bear-1h" style="width:50%"></div></div>
       <div class="btf-counts"><span class="btf-count-bull" id="btf-nb-1h">—▲</span><span class="btf-count-bear" id="btf-nd-1h">—▼</span></div>
