@@ -1,0 +1,12 @@
+{
+  "name": "market-monitor",
+  "version": "2.4.0",
+  "description": "BTC Market Breadth Monitor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
